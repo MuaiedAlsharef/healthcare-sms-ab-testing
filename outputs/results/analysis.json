@@ -1,0 +1,170 @@
+{
+  "design": {
+    "seed": 20261111,
+    "alpha": 0.05,
+    "power": 0.8,
+    "baseline": 0.2,
+    "mde": 0.03,
+    "daily_traffic": 100,
+    "start_date": "2026-01-05",
+    "minimum_business_reduction": 0.02,
+    "cancellation_margin": 0.02,
+    "complaint_margin": 0.005,
+    "maximum_failure_rate": 0.08,
+    "maximum_cost_per_appointment": 0.5,
+    "sms_cost": 0.2,
+    "monthly_fixed_cost": 1000.0,
+    "monthly_volume": 10000,
+    "capacity_value": 100.0,
+    "realization": 0.5,
+    "delivery_probability": 0.96,
+    "delivered_reduction": 0.04,
+    "expected_n_per_arm": 2629,
+    "total_n": 5258,
+    "enrollment_calendar_days": 53,
+    "maximum_followup_days": 31
+  },
+  "analysis": {
+    "primary": {
+      "control": {
+        "n": 2592,
+        "events": 520,
+        "rate": 0.2006172839506173,
+        "rate_ci": [
+          0.18564864223184396,
+          0.21647200934867178
+        ]
+      },
+      "treatment": {
+        "n": 2666,
+        "events": 440,
+        "rate": 0.16504126031507876,
+        "rate_ci": [
+          0.1514339445334218,
+          0.17961247618217352
+        ]
+      },
+      "effect": -0.03557602363553852,
+      "effect_pp": -3.557602363553852,
+      "relative_effect_pct": -17.733279473714585,
+      "ci": [
+        -0.05646229328784612,
+        -0.014689753983230927
+      ],
+      "p_value": 0.0008424779889895953,
+      "standard_error": 0.010656455841564348,
+      "method": "Unpooled two-sided Wald z test and matching 95% CI"
+    },
+    "guardrails": {
+      "cancelled": {
+        "control": {
+          "n": 2592,
+          "events": 151,
+          "rate": 0.058256172839506175,
+          "rate_ci": [
+            0.04987575747676163,
+            0.06794401837335506
+          ]
+        },
+        "treatment": {
+          "n": 2666,
+          "events": 167,
+          "rate": 0.06264066016504126,
+          "rate_ci": [
+            0.054056927234586924,
+            0.07248296812306602
+          ]
+        },
+        "effect": 0.004384487325535084,
+        "effect_pp": 0.43844873255350847,
+        "relative_effect_pct": 7.5262193031701585,
+        "ci": [
+          -0.008559037005538042,
+          0.017311296196742335
+        ],
+        "standard_error": 0.006571936929004427,
+        "method": "Newcombe hybrid Wilson risk-difference CI",
+        "margin": 0.02,
+        "upper_bound": 0.017311296196742335,
+        "passed": true
+      },
+      "complaint": {
+        "control": {
+          "n": 2592,
+          "events": 9,
+          "rate": 0.003472222222222222,
+          "rate_ci": [
+            0.0018278409551208364,
+            0.0065861778388531305
+          ]
+        },
+        "treatment": {
+          "n": 2666,
+          "events": 10,
+          "rate": 0.0037509377344336083,
+          "rate_ci": [
+            0.002038734822247209,
+            0.006891180750801547
+          ]
+        },
+        "effect": 0.0002787155122113863,
+        "effect_pp": 0.02787155122113863,
+        "relative_effect_pct": 8.027006751687926,
+        "ci": [
+          -0.0032749246489257493,
+          0.0038234462429498394
+        ],
+        "standard_error": 0.001654272208597368,
+        "method": "Newcombe hybrid Wilson risk-difference CI",
+        "margin": 0.005,
+        "upper_bound": 0.0038234462429498394,
+        "passed": true
+      },
+      "delivery_failure": {
+        "n": 2666,
+        "events": 108,
+        "rate": 0.04051012753188297,
+        "ci": [
+          0.03366371329633434,
+          0.048678801123155264
+        ],
+        "limit": 0.08,
+        "passed": true
+      },
+      "cost": {
+        "observed_control_mean_sar": 0.0,
+        "observed_treatment_mean_sar": 0.19999999999999998,
+        "rollout_cost_per_appointment_sar": 0.30000000000000004,
+        "limit": 0.5,
+        "passed": true
+      }
+    },
+    "statistically_significant_improvement": true,
+    "practically_significant_point_estimate": true
+  },
+  "business": {
+    "monthly_volume": 10000,
+    "avoided_no_shows_low_point_high": [
+      146.89753983230926,
+      355.76023635538525,
+      564.6229328784611
+    ],
+    "estimated_attendance_change_pp": 3.119153631000344,
+    "potential_attended_slots_point": 311.91536310003437,
+    "sms_and_fixed_cost_sar": 3000.0,
+    "value_per_recovered_slot_sar": 100.0,
+    "capacity_realization_fraction": 0.5,
+    "net_value_low_point_high_sar": [
+      4344.876991615463,
+      14788.011817769264,
+      25231.146643923057
+    ],
+    "interpretation": "CI propagates primary sampling uncertainty only; scenario inputs are assumed."
+  },
+  "decision": {
+    "simulated_decision": "Launch",
+    "rationale": "All pre-specified efficacy, guardrail and conservative scenario-value gates pass.",
+    "real_world_recommendation": "Conduct a prospectively registered real-world randomized pilot; synthetic evidence does not authorize deployment."
+  },
+  "data_sha256": "e9c51403be53fbb9d09d1ad594e0ecec8632f6b9f3b7b4f1b2a6b9fb8dbb4dcc"
+}

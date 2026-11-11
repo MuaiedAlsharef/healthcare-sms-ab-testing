@@ -1,0 +1,10 @@
+{
+  "README.md": "12acdaa4c022acd1a04ac1994eb12c5ade3b00970f692f1f205e065ad1aeee7f",
+  "data/appointments.csv": "e9c51403be53fbb9d09d1ad594e0ecec8632f6b9f3b7b4f1b2a6b9fb8dbb4dcc",
+  "outputs/results/analysis.json": "789a176b114b3fafa633d7eabc4a08b8f9326eaaa2f1c95c26ea15466b9ab4ea",
+  "outputs/results/covariate_balance.csv": "deef00f13782bfbeaafc5bb8cfa1c9c00cb864f1f57a53921ee1f61195391382",
+  "outputs/results/data_quality.json": "a8da658caad0ce3090d44e416c25c0c6812297b3c2ae3c20a150470453ea9e8c",
+  "outputs/results/data_quality.md": "ef228988a6b1111f3dec4441242b4675029b80a4d8590f65287fd7eefa850c0f",
+  "outputs/results/design.json": "1bc2746d4b8d54d33bbe1f7496feccd65ce3edb3272176e411d96c7e356cb710",
+  "outputs/results/summary.md": "e1780d10bdcbecedfc32c0471cbcefb1b7397299d9f762dcb416f268864e795a"
+}

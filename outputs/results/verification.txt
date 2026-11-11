@@ -1,0 +1,14 @@
+Local validation completed 2026-11-11.
+Clean Python 3.12 virtual environment created outside the project directory.
+python -m pip install -r requirements.txt: SUCCESS
+python -m pip check: No broken requirements found.
+python -m pytest -q: 24 passed, 14 dependency deprecation warnings, 3.45 seconds.
+python main.py: SUCCESS (exit 0)
+python -m src.verify_outputs: PASS (independent CSV counts, effect, p-value, README and PNG checks)
+python -m src.checksums --check: PASS (numerical/report reproduction)
+Existing-input execution and byte preservation: PASS in integration test.
+Six charts visually inspected; sample-size tick formatting improved and regenerated.
+Python 3.11: configured in hosted CI; not executed locally.
+GitHub Actions: workflow authored, NOT RUN remotely.
+GitHub publication and public access: BLOCKED / NOT VERIFIED.
+No remote commit or repository creation is claimed.

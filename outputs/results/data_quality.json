@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "rows": 5258,
+  "missing_required_values": 0,
+  "duplicate_patients": 0,
+  "checks": {
+    "eligible_adults": true,
+    "valid_covariates": true,
+    "one_exclusive_outcome": true,
+    "assignment_at_scheduling": true,
+    "valid_enrollment_window": true,
+    "consistent_lead_time": true,
+    "reminder_24_hours_before": true,
+    "reminder_after_assignment": true,
+    "outcomes_complete": true,
+    "attempts_match_assignment": true,
+    "delivery_requires_attempt": true,
+    "cost_consistent": true
+  },
+  "control_n": 2592,
+  "treatment_n": 2666,
+  "srm_p_value": 0.3074820108670862,
+  "srm_alarm_threshold": 0.001,
+  "covariate_balance": [
+    {
+      "covariate": "age",
+      "control_mean": 48.77199074074074,
+      "treatment_mean": 49.047261815453865,
+      "smd": 0.015172845410133185
+    },
+    {
+      "covariate": "prior_no_show",
+      "control_mean": 0.24691358024691357,
+      "treatment_mean": 0.2569392348087022,
+      "smd": 0.023091389647360655
+    },
+    {
+      "covariate": "lead_days",
+      "control_mean": 16.261188271604937,
+      "treatment_mean": 16.273068267066765,
+      "smd": 0.00141609976689718
+    },
+    {
+      "covariate": "distance_km",
+      "control_mean": 25.646616512345677,
+      "treatment_mean": 25.77118529632408,
+      "smd": 0.00878931233824695
+    },
+    {
+      "covariate": "specialty_Dental",
+      "control_mean": 0.20640432098765432,
+      "treatment_mean": 0.20142535633908476,
+      "smd": -0.01235550537619925
+    },
+    {
+      "covariate": "specialty_Primary care",
+      "control_mean": 0.4957561728395062,
+      "treatment_mean": 0.47936984246061515,
+      "smd": -0.03278097125138841
+    },
+    {
+      "covariate": "specialty_Specialist",
+      "control_mean": 0.2978395061728395,
+      "treatment_mean": 0.3192048012003001,
+      "smd": 0.04626048308862491
+    }
+  ],
+  "balance_warnings": [],
+  "interpretation": "SRM and SMD are diagnostics, not proof of valid randomization; no outcome-based exclusions."
+}
