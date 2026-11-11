@@ -8,7 +8,15 @@ python -m src.verify_outputs: PASS (independent CSV counts, effect, p-value, REA
 python -m src.checksums --check: PASS (numerical/report reproduction)
 Existing-input execution and byte preservation: PASS in integration test.
 Six charts visually inspected; sample-size tick formatting improved and regenerated.
-Python 3.11: configured in hosted CI; not executed locally.
-GitHub Actions: workflow authored, NOT RUN remotely.
-GitHub publication and public access: BLOCKED / NOT VERIFIED.
-No remote commit or repository creation is claimed.
+Hosted GitHub validation confirmed 2026-11-11:
+Repository: https://github.com/MuaiedAlsharef/healthcare-sms-ab-testing
+Visibility: public (GitHub repository metadata).
+Publication commit: 38d030690f016095609cde7bdc4b103d66f17449
+All 35 main-branch files matched local Git blob hashes, including CSV and six PNGs.
+GitHub Actions run: 43074731568
+Python 3.11 job 130711468555: SUCCESS (all steps).
+Python 3.12 job 130711469297: SUCCESS (all steps).
+Both jobs installed dependencies, ran tests, executed main.py, verified results/README,
+checked deterministic hashes and uploaded artifacts successfully.
+This status-only update does not alter source code, data, README or analytical outputs.
+See the latest Actions run for validation of subsequent branch-head commits.

@@ -1,6 +1,6 @@
 # Official evaluation acceptance checklist
 
-Status is based on local execution; publication is still blocked by account access.
+Status is based on local validation and successful hosted GitHub Actions on Python 3.11 and 3.12. Publication verified on 2026-11-11.
 
 | Criterion | Status | Evidence |
 |---|---|---|
@@ -34,10 +34,15 @@ Status is based on local execution; publication is still blocked by account acce
 | README complete | PASS | Generated report with actual outputs |
 | Analytical outputs saved | PASS | CSV, JSON, Markdown and six PNGs |
 | Python execution verified | PASS | Automated tests and full pipeline passed locally |
-| GitHub repository public | BLOCKED | No accessible repository; creation tool unavailable; browser not signed in |
-| Repository URL available | BLOCKED | No repository created or verified |
+| GitHub repository public | PASS | GitHub metadata confirms public visibility; all 35 main-branch file hashes verified |
+| Repository URL available | PASS | https://github.com/MuaiedAlsharef/healthcare-sms-ab-testing |
 | Academy and official link acknowledged | PASS | README |
 
-**Acceptance: 31 of 33 listed criteria satisfied locally. The project is not yet submission-ready because public GitHub publication is required.**
+**Acceptance: 33 of 33 listed criteria satisfied.**
 
-Additional delivery requirements: GitHub Actions YAML is implemented, but hosted CI has not run. No remote commit or public accessibility claim is made. User action required: make a dedicated public repository available to the GitHub connection, initialized with a README so a default branch exists, then provide its URL. Do not place secrets or real patient data in it.
+Publication commit: `38d030690f016095609cde7bdc4b103d66f17449`.
+All 35 project files, including the dataset and six PNG charts, were compared against local Git blob hashes and matched exactly before this status-only update.
+
+Hosted validation: [GitHub Actions run 43074731568](https://github.com/MuaiedAlsharef/healthcare-sms-ab-testing/actions/runs/43074731568). Both Python 3.11 and 3.12 jobs passed dependency installation, automated tests, full execution, numerical/README verification, deterministic artifact checks and artifact upload. The workflow also runs on subsequent commits; inspect the latest Actions result for the current branch head.
+
+The repository is ready for academic submission. The data remains entirely synthetic; no real-world clinical effectiveness or deployment authorization is claimed.
